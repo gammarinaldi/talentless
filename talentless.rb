@@ -55,6 +55,8 @@ def run
   if current_time.saturday? or current_time.sunday?
     return "Enjoy your weekend, that's an order!"
   end
+  
+  sleep(rand(1..15)*60)
 
   # browser = Ferrum::Browser.new(headless: Setting::HEADLESS, window_size: [3840, 2160])
   browser = Ferrum::Browser.new(headless: Setting::HEADLESS, window_size: [1680, 1050])
